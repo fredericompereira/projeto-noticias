@@ -126,6 +126,16 @@ main p {
     line-height: 1.5;
 }
 
+main ul {
+    margin-left: 20px;
+}
+
+main ul li {
+    margin-bottom: 20px;
+    list-style-type: square;
+    font-size: 1.125em;
+}
+
 #mais {
     display: inline-block;
     margin-bottom: 20px;
@@ -155,6 +165,25 @@ main a {
 
 main a:hover, footer a:hover {
     text-decoration: underline;
+}
+
+#topo {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--cor3);
+    color: #000000;
+    font-family: var(--fonte-titulo);
+}
+
+#topo:hover {
+    cursor: pointer;
+    background-color: #000000;
+    color: var(--cor3);
+}
+
+abbr {
+    text-decoration: none;
 }
 
 footer {

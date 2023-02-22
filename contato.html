@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Tech News</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body id="corpo" onresize="mudouTamanho()">
+    <header>
+        <h1><a href="index.html">Tech News</a></h1>
+        <span class="material-symbols-outlined" id="abrir" onclick="clickMenu()">menu</span>
+        <span class="material-symbols-outlined" id="fechar" onclick="clickMenu()">close</span>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Assuntos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contato</h1>
+
+        <article>
+            <picture>
+                <source media="(min-width: 480px)" srcset="imagens/foto-escrever-840x560.jpg" type="image/jpg">
+                <img src="imagens/foto-escrever-480x320.jpg" alt="Foto celular">
+            </picture>
+            <h2>Dados</h2>
+            <ul>
+                <li><a href="https://www.cursoemvideo.com/" target="_blank" rel="noopener noreferrer">Site do Curso em Vídeo</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://github.com/fredericompereira" target="_blank" rel="noopener noreferrer">Meu repositório no GitHub</a></li>
+            </ul>
+            <ul>
+                <li>Meu e-mail: <a href="mailto:frmipereira@gmail.com">frmipereira@gmail.com</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer>
+        <p>Site criado por <a href="https://github.com/fredericompereira" target="_blank" rel="noopener noreferrer">Frederico Pereira</a></p>
+     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

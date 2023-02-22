@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body id="corpo" onresize="mudouTamanho()">
-     <header>
+    <header>
         <h1><a href="index.html">Tech News</a></h1>
         <span class="material-symbols-outlined" id="abrir" onclick="clickMenu()">menu</span>
         <span class="material-symbols-outlined" id="fechar" onclick="clickMenu()">close</span>
@@ -19,14 +19,15 @@
             <ul>
                 <li><a href="#">Novidades</a></li>
                 <li><a href="#">Assuntos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
-     </header>
+    </header>
 
-     <main>
+    <main id="conteudo-principal">
         <h1>Bem-vindo!</h1>
+        
         <article>
             <picture>
                 <source media="(min-width: 480px)" srcset="imagens/foto-celular-840x560.jpg" type="image/jpg">
@@ -46,66 +47,23 @@
                 <p>Se o IMEI estiver em situação regular, será exibida a mensagem: “Até o momento o IMEI informado não possui restrições de uso”.</p>
                 <p>Caso o IMEI esteja bloqueado, a mensagem informará que “o IMEI informado está impedido por perda, roubo ou furto”. Nessa situação, o consumidor deve entrar em contato com o estabelecimento comercial onde comprou o aparelho e pedir a troca ou o ressarcimento.</p>
                 <p>Apenas o solicitante do impedimento do IMEI pode pedir o desbloqueio (caso reencontre o aparelho). Para isso, o dono do celular precisa entrar em contato com a operadora ou o órgão de Segurança Pública que efetuou o bloqueio e apresentar a nota fiscal.</p>
-    
+
                 <h3>Verifique a nota fiscal</h3>
                 <p>A nota fiscal é a melhor garantia do consumidor para reivindicar seus direitos na compra de produtos irregulares. As notas emitidas pelas lojas ficam registradas no banco de dados do governo, e é possível verificar o documento pelo site da Fazenda.</p>
                 <p>Se a loja ou vendedor não fornecerem nota fiscal, a atenção precisa ser redobrada. Verifique, converse e solicite o máximo de informações, e se possível teste o celular pessoalmente.</p>
-    
+
                 <p>Fonte: <a href="https://canaltech.com.br/smartphone/como-saber-se-um-celular-e-roubado-123814/" target="_blank" rel="noopener noreferrer">Canaltech</a></p>
+
+                <a href="#conteudo-principal" id="topo"><abbr title="Voltar ao topo"><span class="material-symbols-outlined">arrow_upward</span></abbr></a>
             </section>
 
         </article>
-     </main>
+    </main>
 
-     <footer>
+    <footer>
         <p>Site criado por <a href="https://github.com/fredericompereira" target="_blank" rel="noopener noreferrer">Frederico Pereira</a></p>
-     </footer>
-
-     <script>
-        function clickMenu() {
-            if (abrir.style.display == 'none') {
-                abrir.style.display = 'inline-block'
-            } else {
-                abrir.style.display = 'none'
-            }
-
-            if (fechar.style.display == 'inline-block') {
-                fechar.style.display = 'none'
-            } else {
-                fechar.style.display = 'inline-block'
-            }
-
-            if (menu.style.display == 'block') {
-                menu.style.display = 'none'
-            } else {
-                menu.style.display = 'block'
-            }
-
-            if (corpo.style.overflowY == 'hidden') {
-                corpo.style.overflowY = 'scroll'
-            } else {
-                corpo.style.overflowY = 'hidden'
-            }
-        }
-
-        function mudouTamanho() {
-            if (window.innerWidth >= 768) {
-                abrir.style.display = 'none'
-                fechar.style.display = 'none'
-                menu.style.display = 'block'
-                corpo.style.overflowY = 'scroll'
-            }
-            else {
-                abrir.style.display = 'inline-block'
-                fechar.style.display = 'none'
-                menu.style.display = 'none'
-            }
-        }
-
-        function abrirDetalhes() {
-            mais.style.display = 'none'
-            detalhes.style.display = 'block'
-        }
-     </script>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
