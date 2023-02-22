@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body id="corpo" onresize="mudouTamanho()">
+     <header>
+        <h1><a href="index.html">Tech News</a></h1>
+        <span class="material-symbols-outlined" id="abrir" onclick="clickMenu()">menu</span>
+        <span class="material-symbols-outlined" id="fechar" onclick="clickMenu()">close</span>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Assuntos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <main>
+        <h1>Bem-vindo!</h1>
+        <article>
+            <picture>
+                <source media="(min-width: 480px)" srcset="imagens/foto-celular-840x560.jpg" type="image/jpg">
+                <img src="imagens/foto-celular-480x320.jpg" alt="Foto celular">
+            </picture>
+            <h2>Como saber se um celular é roubado</h2>
+            <p>Comprar um celular com revendedor ou em lojas que não sejam confiáveis pode trazer prejuízo ao consumidor. Para evitar a aquisição de um produto em situação ilegal, há como saber se um celular é roubado conferindo a nota fiscal e consultando a identificação IMEI.</p>
+
+            <a id="mais" onclick="abrirDetalhes()">Leia mais</a>
+
+            <section id="detalhes">
+                <p>Um dos sinais que podem indicar que um celular é roubado é o estado dos acessórios que acompanham o produto, como cabos, carregadores e adaptadores danificados ou incompatíveis. Qualquer suspeita sobre a autenticidade e legalidade de um aparelho, consulte os sites da Anatel e da Fazenda.</p>
+                
+                <h3>Consulte a situação do IMEI</h3>
+                <p>O IMEI é o número de identificação do celular. Esse código de 15 dígitos pode ser encontrado na nota fiscal, na caixa original do dispositivo ou ligando para *#06# através do aparelho.</p>
+                <p>Quando um celular é roubado, o dono do aparelho pode bloquear o IMEI através da operadora de telefonia ou com o boletim de ocorrência. Para saber se o dispositivo está em situação legal, é possível fazer uma consulta do IMEI pelo site da Anatel.</p>
+                <p>Se o IMEI estiver em situação regular, será exibida a mensagem: “Até o momento o IMEI informado não possui restrições de uso”.</p>
+                <p>Caso o IMEI esteja bloqueado, a mensagem informará que “o IMEI informado está impedido por perda, roubo ou furto”. Nessa situação, o consumidor deve entrar em contato com o estabelecimento comercial onde comprou o aparelho e pedir a troca ou o ressarcimento.</p>
+                <p>Apenas o solicitante do impedimento do IMEI pode pedir o desbloqueio (caso reencontre o aparelho). Para isso, o dono do celular precisa entrar em contato com a operadora ou o órgão de Segurança Pública que efetuou o bloqueio e apresentar a nota fiscal.</p>
+    
+                <h3>Verifique a nota fiscal</h3>
+                <p>A nota fiscal é a melhor garantia do consumidor para reivindicar seus direitos na compra de produtos irregulares. As notas emitidas pelas lojas ficam registradas no banco de dados do governo, e é possível verificar o documento pelo site da Fazenda.</p>
+                <p>Se a loja ou vendedor não fornecerem nota fiscal, a atenção precisa ser redobrada. Verifique, converse e solicite o máximo de informações, e se possível teste o celular pessoalmente.</p>
+    
+                <p>Fonte: <a href="https://canaltech.com.br/smartphone/como-saber-se-um-celular-e-roubado-123814/" target="_blank" rel="noopener noreferrer">Canaltech</a></p>
+            </section>
+
+        </article>
+     </main>
+
+     <footer>
+        <p>Site criado por <a href="https://github.com/fredericompereira" target="_blank" rel="noopener noreferrer">Frederico Pereira</a></p>
+     </footer>
+
+     <script>
+        function clickMenu() {
+            if (abrir.style.display == 'none') {
+                abrir.style.display = 'inline-block'
+            } else {
+                abrir.style.display = 'none'
+            }
+
+            if (fechar.style.display == 'inline-block') {
+                fechar.style.display = 'none'
+            } else {
+                fechar.style.display = 'inline-block'
+            }
+
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+
+            if (corpo.style.overflowY == 'hidden') {
+                corpo.style.overflowY = 'scroll'
+            } else {
+                corpo.style.overflowY = 'hidden'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                abrir.style.display = 'none'
+                fechar.style.display = 'none'
+                menu.style.display = 'block'
+                corpo.style.overflowY = 'scroll'
+            }
+            else {
+                abrir.style.display = 'inline-block'
+                fechar.style.display = 'none'
+                menu.style.display = 'none'
+            }
+        }
+
+        function abrirDetalhes() {
+            mais.style.display = 'none'
+            detalhes.style.display = 'block'
+        }
+     </script>
+</body>
+</html>

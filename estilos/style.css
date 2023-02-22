@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor1: #B3B3B3;
+    --cor2: #333333;
+    --cor3: #f5ab18;
+    --fonte-titulo: 'Press Start 2P', monospace;
+    --fonte-texto: 'IBM Plex Mono', monospace;
+}
+
+body {
+    background-color: var(--cor1);
+    font-family: var(--fonte-texto);
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #000000;
+    font-family: var(--fonte-titulo);
+    text-align: center;
+}
+
+header h1 {
+    margin-right: 10px;
+    display: inline-block;
+    color: var(--cor3);
+    font-size: 1.5em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+header a {
+    color: var(--cor3);
+}
+
+#abrir, #fechar {
+    cursor: pointer;
+    color: var(--cor3);
+    font-size: 28px;
+}
+
+#fechar {
+    display: none;
+}
+
+#menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background-color: #000000;
+}
+
+#menu ul {
+    margin: 0px 20px 20px 20px;
+    background-color: var(--cor2);
+    list-style-type: none;
+}
+
+#menu a {
+    padding: 20px;
+    display: block;
+    text-transform: uppercase;
+}
+
+#menu a:hover {
+    color: #000000;
+    background-color: var(--cor3);
+}
+
+main {
+    margin-top: 68px;
+    padding: 50px 20px 20px 20px;
+    background-color: #ffffff;
+}
+
+main h1, main h2, main h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: normal;
+}
+
+main h1 {
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+
+main h2 {
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
+main h3 {
+    margin: 40px 0px 10px 0px;
+    font-size: 1.25em;
+}
+
+main img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 5px solid #000000;
+
+}
+
+main p {
+    margin-bottom: 30px;
+    font-size: 1.125em;
+    line-height: 1.5;
+}
+
+#mais {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--cor3);
+    color: #000000;
+    font-family: var(--fonte-titulo);
+    font-weight: normal;
+    font-size: 1em;
+}
+
+#mais:hover {
+    cursor: pointer;
+    background-color: #000000;
+    color: var(--cor3);
+    text-decoration: none;
+}
+
+#detalhes {
+    display: none;
+}
+
+main a {
+    color: var(--cor2);
+    font-weight: bold;
+}
+
+main a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 30px 20px;
+    background-color: #000000;
+    text-align: center;
+}
+
+footer p {
+    color: #ffffff;
+    font-family: var(--fonte-titulo);
+    font-size: 0.875em;
+    line-height: 1.5;
+}
+
+footer a {
+    color: var(--cor3);
+}
